@@ -1,0 +1,283 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Hesham Medhat, ain shams university, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+F:\hesham\Cities\Cities.uvprojx
+Project File Date:  06/21/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(4): warning: In file included from...
+./Uart.h(30): warning: no newline at end of file [-Wnewline-eof]
+#endif //UART_MODULE
+                    ^
+main.c(12): warning: In file included from...
+./lcd.h(49): warning: no newline at end of file [-Wnewline-eof]
+*/
+  ^
+main.c(13): warning: no previous extern declaration for non-static variable 'cities' [-Wmissing-variable-declarations]
+char cities[][10] = {"London", "Paris", "Madrid", "Rome", "Athens", "Ankara", "Istanbul",
+     ^
+main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char cities[][10] = {"London", "Paris", "Madrid", "Rome", "Athens", "Ankara", "Istanbul",
+^
+main.c(15): warning: no previous extern declaration for non-static variable 'timediff' [-Wmissing-variable-declarations]
+char timediff[] = {0, 1, 1, 1, 2, 2, 2, 2, 3, 4};
+     ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char timediff[] = {0, 1, 1, 1, 2, 2, 2, 2, 3, 4};
+^
+main.c(35): warning: declaration shadows a typedef in the global scope [-Wshadow]
+    } AMessage;
+      ^
+./lcd.h(30): note: previous declaration is here
+    } AMessage;
+      ^
+main.c(28): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void Task1(void *pvParameters)
+                 ^
+main.c(28): warning: no previous prototype for function 'Task1' [-Wmissing-prototypes]
+void Task1(void *pvParameters)
+     ^
+main.c(28): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Task1(void *pvParameters)
+^
+static 
+main.c(29): warning: function 'Task1' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(66): warning: no previous prototype for function 'Read_From_Keyboard' [-Wmissing-prototypes]
+unsigned int Read_From_Keyboard()
+             ^
+main.c(66): note: declare 'static' if the function is not intended to be used outside of this translation unit
+unsigned int Read_From_Keyboard()
+^
+static 
+main.c(66): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+unsigned int Read_From_Keyboard()
+                               ^
+main.c(87): warning: no previous prototype for function 'Read_Time' [-Wmissing-prototypes]
+void Read_Time(char buf[])
+     ^
+main.c(87): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Read_Time(char buf[])
+^
+static 
+main.c(112): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+        digit = value;
+              ~ ^~~~~
+main.c(102): warning: no previous prototype for function 'ByteToStr' [-Wmissing-prototypes]
+void ByteToStr(int value, char string[])
+     ^
+main.c(102): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ByteToStr(int value, char string[])
+^
+static 
+main.c(127): warning: declaration shadows a typedef in the global scope [-Wshadow]
+    } AMessage;
+      ^
+./lcd.h(30): note: previous declaration is here
+    } AMessage;
+      ^
+main.c(120): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void Task2(void *pvParameters)
+                 ^
+main.c(120): warning: no previous prototype for function 'Task2' [-Wmissing-prototypes]
+void Task2(void *pvParameters)
+     ^
+main.c(120): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Task2(void *pvParameters)
+^
+static 
+main.c(121): warning: function 'Task2' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(178): warning: declaration shadows a typedef in the global scope [-Wshadow]
+    } AMessage;
+      ^
+./lcd.h(30): note: previous declaration is here
+    } AMessage;
+      ^
+main.c(183): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    UART_send_string ("\n\rTime in Different Countries");
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(184): warning: passing 'char [30]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    UART_send_string ("\n\r---------------------------");
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(185): warning: passing 'char [40]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    UART_send_string ("\n\rEnter the time in London (hh:mm:ss): ");
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(193): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        UART_send_string ("\n\r\n\rSelect a City:"); //Heading
+                          ^~~~~~~~~~~~~~~~~~~~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(196): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            UART_send_string ("\n\r"); //New line
+                              ^~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(198): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            UART_send_string (". ");
+                              ^~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(199): warning: array subscript is of type 'char' [-Wchar-subscripts]
+            UART_send_string (cities[k]); //City names
+                                    ^~
+main.c(199): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            UART_send_string (cities[k]); //City names
+                              ^~~~~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(201): warning: passing 'char [14]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        UART_send_string ("\n\rSelection: ");     //Selection prompt
+                          ^~~~~~~~~~~~~~~~~
+./Uart.h(28): note: passing argument to parameter 'data' here
+extern void UART_send_string (uint8_t* data);
+                                       ^
+main.c(171): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void Task3(void *pvParameters)
+                 ^
+main.c(171): warning: no previous prototype for function 'Task3' [-Wmissing-prototypes]
+void Task3(void *pvParameters)
+     ^
+main.c(171): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Task3(void *pvParameters)
+^
+static 
+main.c(172): warning: function 'Task3' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(18): warning: no previous extern declaration for non-static variable 'selection' [-Wmissing-variable-declarations]
+unsigned int selection;
+             ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int selection;
+^
+main.c(19): warning: no previous extern declaration for non-static variable 'xQueue1' [-Wmissing-variable-declarations]
+xQueueHandle xQueue1; //Queuel handle
+             ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xQueueHandle xQueue1; //Queuel handle
+^
+C:/Users/bassiouny/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(940): note: expanded from macro 'xQueueHandle'
+        #define xQueueHandle QueueHandle_t
+                             ^
+main.c(20): warning: no previous extern declaration for non-static variable 'xQueue2' [-Wmissing-variable-declarations]
+xQueueHandle xQueue2; //Queue2 handle
+             ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xQueueHandle xQueue2; //Queue2 handle
+^
+C:/Users/bassiouny/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(940): note: expanded from macro 'xQueueHandle'
+        #define xQueueHandle QueueHandle_t
+                             ^
+main.c(12): warning: In file included from...
+./lcd.h(18): warning: unused function 'LCD_Command' [-Wunused-function]
+static void LCD_Command(unsigned char c);                  //Send command
+            ^
+34 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=11292 RO-data=1804 RW-data=120 ZI-data=4984  
+".\Objects\Cities.axf" - 0 Error(s), 34 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.3.1.pack
+                ARM.CMSIS-FreeRTOS.10.3.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: FreeRTOS Version: 10.3.1
+   * Component: Core Variant: Cortex-M Version: 10.3.1
+   * Component: Heap Variant: Heap_1 Version: 10.3.1
+   * Component: Timers Version: 10.3.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\RTOS
+  .\RTE\_Target_1
+  C:\Users\bassiouny\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.3.1\CMSIS\RTOS2\FreeRTOS\Include
+  C:\Users\bassiouny\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.3.1\Source\include
+  C:\Users\bassiouny\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.3.1\Source\portable\GCC\ARM_CM4F
+  C:\Users\bassiouny\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\bassiouny\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM.FreeRTOS::RTOS:Config:FreeRTOS:10.3.1
+      Include file:  Config\ARMCM\FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.3.1
+      Include file:  Source\include\task.h
+      Source file:   Source\list.c
+      Include file:  Source\include\FreeRTOS.h
+      Include file:  Source\include\semphr.h
+      Include file:  Source\include\queue.h
+      Source file:   Source\queue.c
+      Source file:   Source\tasks.c
+      Source file:   Source\portable\GCC\ARM_CM4F\port.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_1:10.3.1
+      Source file:   Source\portable\MemMang\heap_1.c
+
+   * Component: ARM.FreeRTOS::RTOS:Timers:10.3.1
+      Include file:  Source\include\timers.h
+      Source file:   Source\timers.c
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Include file:  Device\Include\TM4C123\TM4C123.h
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+      Source file:   Device\Source\system_TM4C123.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
